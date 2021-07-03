@@ -1,0 +1,125 @@
+@font-face {
+	font-family: 'codropsicons';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/codropsicons/codropsicons.eot');
+	src: url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'), url('../fonts/codropsicons/codropsicons.woff') format('woff'), url('../fonts/codropsicons/codropsicons.ttf') format('truetype'), url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+
+*,
+*::after,
+*::before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	margin: 0;
+	color: #444;
+	background: #f6f6f6;
+}
+
+a {
+	text-decoration: none;
+	color: #d1b790;
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	color: #bba077;
+	outline: none;
+}
+
+
+/* Top Navigation Style */
+
+.meta {
+	font-size: 0.75em;
+	line-height: 1;
+	position: absolute;
+	top: 1em;
+	left: 1em;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	white-space: nowrap;
+	border-top: 1px solid #d1b790;
+}
+
+.meta::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 1px;
+	height: 100%;
+	background: #d1b790;
+}
+
+.meta a {
+	display: block;
+	padding: 1em 1.35em;
+	border: 1px solid #d1b790;
+	border-top: 0;
+}
+
+.meta a:not(:last-child) {
+	border-right: 0;
+}
+
+.codrops-icon {
+	width: 4em;
+}
+
+.codrops-icon span {
+	display: none;
+}
+
+.codrops-icon::before {
+	font-family: 'codropsicons';
+	font-size: 1.15em;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 1;
+	text-transform: none;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+.codrops-icon--drop::before {
+	content: '\e001';
+	color: #09c;
+}
+
+.codrops-icon--prev::before {
+	content: '\e004';
+}
+
+
+/* Demo links */
+
+.demo-link {
+	font-family: 'Playfair Display';
+	font-weight: bold;
+	text-align: center;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+}
+
+.demo-link--current {
+	color: #bba077;
+}
+
+@media screen and (max-width:40em) {
+	.meta {
+		right: 1em;
+	}
+	.demo-link {
+		-webkit-flex: 1;
+		flex: 1;
+	}
+}
