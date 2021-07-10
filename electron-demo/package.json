@@ -1,0 +1,24 @@
+{
+  "name": "master-electron",
+  "version": "1.0.0",
+  "description": "Master Electron Code",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "watch": "nodemon --exec electron .",
+    "reset": "git reset --hard"
+  },
+  "repository": "https://github.com/PawanRamaMali/JS",
+  "keywords": [
+    "Electron",
+    "JS Electron",
+    "demo"
+  ],
+  "author": "GitHub, PawanRamaMali",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^9.0.0",
+    "nodemon": "^2.0.0"
+  },
+  "dependencies": {}
+}
