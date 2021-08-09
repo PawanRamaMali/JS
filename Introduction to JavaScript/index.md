@@ -67,3 +67,11 @@ With advances in browser technology and JavaScript having moved into the server 
 * Can handle date and time.
 * Performs Form Validation although the forms are created using HTML.
 * No compiler needed.
+
+## Limitations of JavaScript: 
+
+* Performance: JavaScript does not provide the same level of performance as offered by many traditional languages as a complex program written in JavaScript would be comparatively slow. But as JavaScript is used to perform simple tasks in a browser, so performance is not considered a big restriction in its use.
+
+* Complexity: To master a scripting language, programmers must have a thorough knowledge of all the programming concepts, core language objects, client and server-side objects otherwise it would be difficult for them to write advanced scripts using JavaScript.
+
+* Weak error handling and type checking facilities: It is weakly typed language as there is no need to specify the data type of the variable. So wrong type checking is not performed by compile.
