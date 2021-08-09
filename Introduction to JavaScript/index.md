@@ -7,7 +7,7 @@ JavaScript is among the most powerful and flexible programming languages of the 
 
 JavaScript is a lightweight, cross-platform, and interpreted scripting language. It is well-known for the development of web pages, many non-browser environments also use it. JavaScript can be used for Client-side developments as well as Server-side developments. JavaScript contains a standard library of objects, like Array, Date, and Math, and a core set of language elements like operators, control structures, and statements. 
 
-## Why is it called JavaScript?
+## Why is it called JavaScript ?
 
 When JavaScript was created, it initially had another name: “LiveScript”. But Java was very popular at that time, so it was decided that positioning a new language as a “younger brother” of Java would help.
 
@@ -27,6 +27,19 @@ But as it evolved, JavaScript became a fully independent language with its own s
 #### External JS:
 We can write JavaScript code in other file having an extension .js and then link this file inside the `<head>` tag of the HTML file in which we want to add this code.
 
+
+### JavaScript engines
+
+JavaScript can execute not only in the browser, but also on the server, or actually on any device that has a special program called the JavaScript engine.
+
+* The browser has an embedded engine sometimes called a “JavaScript virtual machine”.
+
+Different engines have different “codenames”. For example:
+
+* V8 – in Chrome and Opera.
+* SpiderMonkey – in Firefox.
+* “Chakra” for IE
+* “JavaScriptCore”, “Nitro” and “SquirrelFish” for Safari, etc.
 
 ## Syntax:
 
