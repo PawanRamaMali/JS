@@ -88,6 +88,22 @@ This limitation is, again, for the user’s safety. A page from http://anysite.c
 
 * JavaScript can easily communicate over the net to the server where the current page came from. But its ability to receive data from other sites/domains is crippled. Though possible, it requires explicit agreement (expressed in HTTP headers) from the remote side. Once again, that’s a safety limitation.
 
+Such limits do not exist if JavaScript is used outside of the browser, for example on a server. Modern browsers also allow plugin/extensions which may ask for extended permissions
+
+### What makes JavaScript unique?
+
+There are at least three great things about JavaScript:
+
+* Full integration with HTML/CSS.
+* Simple things are done simply.
+* Support by all major browsers and enabled by default.
+
+JavaScript is the only browser technology that combines these three things.
+
+That’s what makes JavaScript unique. That’s why it’s the most widespread tool for creating browser interfaces.
+
+That said, JavaScript also allows to create servers, mobile applications, etc.
+
 
 ## Syntax:
 
