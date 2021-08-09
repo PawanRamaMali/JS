@@ -20,3 +20,36 @@ JavaScript is a lightweight, cross-platform, and interpreted scripting language.
 
 ## External JS:
 We can write JavaScript code in other file having an extension .js and then link this file inside the `<head>` tag of the HTML file in which we want to add this code.
+
+
+## Syntax:
+
+```
+<script>
+    // JavaScript Code
+</script>
+```
+
+## HTML 
+
+```
+<!DOCTYPE html>
+<html lang="en">
+   
+<head>
+    <title>
+         Example JavaScript
+    </title>
+</head>
+   
+<body>
+   
+    <!-- JavaScript code can be embedded inside
+        head section or body section -->
+    <script>
+        console.log("Welcome to JS");
+    </script>
+</body>
+   
+</html>
+```
