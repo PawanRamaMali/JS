@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Budget App</title>
+
+    <!-- bootstrap style css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- main css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+    <!-- font awesome style -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    
+    <!-- bootstarp Js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container-fluid">
+    
+        <div class="row">
+            <!-- top starts -->
+            <div class="col-md-5 offset-md-3 my-3">
+                <div class="card bg-light">
+                    <div class="card-header">
+                        <center>
+                            <h3 class="budget_heading"> <i class="fas fa-dollar-sign" style="color: crimson;"></i> Budget
+                                Management</h3>
+                            <h3><span class="badge badge-success" id="badget_month">%month%</span></h3>
+                        </center>
+                    </div>
+                    <div class="card-body">
+                        <!-- user input type, des, val -->
+                        <form class="form-inline">
+                            <!-- input type inc/exp -->
+                            <div class="form-group mb-2">
+                                <select class="form-control form-control-sm mr-1 font" id="typ">
+                                    <option value="inc" selected>+</option>
+                                    <option value="exp">-</option>
+                                </select>
+                            </div>
+                            <!-- input description, amount-->
+                            <div class="form-group mx-sm-3 mb-2">
+                                <input type="text" class="form-control mr-1" id="description" placeholder="description">
+                                <input type="number" class="form-control" id="amount" placeholder="0">
+                            </div>
+                            <!-- proceed button -->
+                            <button type="button" onclick="this.blur()" class="btn btn-sm btn-outline-info mb-2" id="itemSubmit">
+                                <i class="far fa-check-circle" style="color: green"></i>
+                            </button>
+                        </form>
+    
+                    </div>
+                    <div class="card-footer text-muted">
+                        <!-- total income, expense -->
+                        <center>
+                            <button class="btn bg-info disabled">
+                                INCOME <span class="badge badge-primary" id="total_income">0</span>
+                            </button> <br> <br>
+                            <button class="btn bg-danger disabled">
+                                EXPENSE <span class="badge badge-warning" id="total_expense">0</span> <span class="badge badge-danger" id="total_percentage">0</span>
+                            </button>
+                        </center>
+                    </div>
+                </div>
+    
+            </div>
+            <!-- top ends -->
+        </div>
+    
+        <!-- bottom starts -->
+        <div class="row main_area">
+            <!-- income list section -->
+            <div class="col-md-5 my-3 mx-5">
+                <div class="card bg-light">
+                    <div class="card-header bg-info">
+                        Income
+                    </div>
+                    <div class="card-body" style="max-height: 200px;overflow:auto;">
+                        <div class="row">
+                            <div class="col-sm-12" id="incomeList">
+                                <!-- income list -->
+
+                                <!-- <div class="row border-bottom" id="income-0">
+                                    <div class="col-sm-9 offset-sm-1 m-1 itemDescription">
+                                        income
+                                    </div>
+                                    <div class="col-xm-6 m-1 itemVal">
+                                        0
+                                    </div>
+                                    <div class="col-xm-2 m-1 itemDel">
+                                        <i class="far fa-times-circle delete_btn"></i>
+                                    </div>
+                                </div>
+    
+                                -->
+    
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="card-footer text-muted">
+                            <center>
+                                <button id="total_income" class="btn bg-info disabled">
+                                    INCOME <span class="badge badge-primary">0</span>
+                                </button> <br> <br>
+                                <button id="total_expense" class="btn bg-danger disabled">
+                                    EXPENSE <span class="badge badge-warning">454654</span>
+                                </button>
+                            </center>
+                        </div> -->
+                </div>
+            </div>
+    
+            <!-- expense section -->
+            <div class="col-md-5 my-3 mx-5">
+                <div class="card bg-light">
+                    <div class="card-header bg-danger">
+                        Expense
+                    </div>
+                    <div class="card-body" style="max-height: 200px;overflow:auto;">
+                        <div class="row">
+                            <div class="col-sm-12 " id="expenseList">
+                                <!-- expense list -->
+
+                                <!-- <div class="row hovereffect border-bottom" id="expense-0">
+                                    <div class="col-sm-8 offset-sm-1 m-1 itemDescription">
+                                        travel
+                                    </div>
+                                    <div class="col-xm-6 m-1 itemVal">
+                                        0
+                                    </div>
+                                    <div class="col-xm-6 m-1 itemPercentage">
+                                        <span class="badge badge-pill badge-primary">0%</span>
+                                    </div>
+                                    <div class="col-xm-2 m-1 itemDel">
+                                        <i class="far fa-times-circle delete_btn"></i>
+                                    </div>
+                                </div>
+    
+                                 -->
+    
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="card-footer text-muted">
+                            <center>
+                                <button id="total_income" class="btn bg-info disabled">
+                                    INCOME <span class="badge badge-primary">0</span>
+                                </button> <br> <br>
+                                <button id="total_expense" class="btn bg-danger disabled">
+                                    EXPENSE <span class="badge badge-warning">454654</span>
+                                </button>
+                            </center>
+                        </div> -->
+                </div>
+            </div>
+    
+        </div>
+        <!-- bottom end -->
+    </div>
+
+    <!-- document script -->
+    <script src="main.js"></script>
+</body>
+</html>
