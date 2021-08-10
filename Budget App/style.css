@@ -1,0 +1,22 @@
+*{ margin: 0; padding: 0; }
+
+.font{ font-size: 20px; font-weight: bold; }
+
+.budget_heading{
+    font-family: 'Pacifico', cursive;
+}
+.delete_btn{
+    color: red; 
+    font-size: 15px;
+    cursor: pointer;
+}
+.delete_btn:hover{
+    font-size: 20px;
+    transition: 0.8s;
+}
+.hovereffect:hover{
+    cursor: pointer;
+}
+body{ background: linear-gradient(to right, #000000, #434343); }
+
+#total_income, #total_expense{ font-weight: bold; }
